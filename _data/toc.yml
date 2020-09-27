@@ -1,3 +1,10 @@
+- title: Snipets
+  url: snippets
+  links:
+    - title: "Docker"
+      url: "snippets/docker"
+    - title: "Microservices"
+      url: "snippets/microservices"
 - title: Documentation
   url: docs
   links:
