@@ -75,7 +75,7 @@ collections:
     permalink: /:collection/:path
   snippets:
     output: true
-    permalink: /:collection/:path/:title
+    permalink: /:collection/:path
 
 # Defaults
 defaults:
