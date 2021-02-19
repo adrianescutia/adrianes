@@ -1,5 +1,7 @@
 ---
 title: Node.js v12 or v14 Installation instructions in WSL Ubuntu 20
+categories:
+     - NodeJS WSL
 ---
 
 ## Node.js v12 or v14 Installation
@@ -32,6 +34,7 @@ sudo apt-mark hold libc6 #to avoid further update
 # Edit: /var/lib/dpkg/info/libc6:amd64.postinst and remove the sleep 1 that is in nearly the last line.
 ```
 
+```s
 ## Run `sudo apt-get install -y nodejs` to install Node.js 14.x and npm
 ## You may also need development tools to build native addons:
      sudo apt-get install gcc g++ make
@@ -39,17 +42,18 @@ sudo apt-mark hold libc6 #to avoid further update
      curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
      echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
      sudo apt-get update && sudo apt-get install yarn
-
+```
 
 
 ## Rollback the "hack"
 
+```s
 sudo apt-mark unhold libc6
 sudo apt install ppa-purge
 sudo ppa-purge ppa:rafaeldtinoco/lp1871129
 sudo apt update
 sudo apt upgrade
-
+```
 
 
 

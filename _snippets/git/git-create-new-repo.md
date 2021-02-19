@@ -1,5 +1,7 @@
 ---
 title: Create a new Git Repo
+categories:
+  - Git
 ---
 
 ## Create a new repo from scratch
