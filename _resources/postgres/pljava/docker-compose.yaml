@@ -1,0 +1,23 @@
+services:
+
+  db:
+    image: ades/postgres11-pljava:1.6.2
+    restart: always
+    volumes:
+      # Just specify a path and let the Engine create a volume
+      - /etc/postgresql
+      # User-relative path
+      - ~/log:/var/log/postgresql
+      - ~/lib:/var/lib/postgresql
+    environment:
+      - POSTGRES_DB=ades
+      - POSTGRES_USER=ades
+      - POSTGRES_PASSWORD=supersecretpwd
+
+  adminer:
+    image: adminer
+    depends_on:
+      - db
+    restart: always
+    ports:
+      - 9000:8080

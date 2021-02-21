@@ -7,5 +7,11 @@
       url: "snippets#Kubernetes"
     - title: NodeJS
       url: "snippets#NodeJS"
-- title: Documentation
+- title: More than Snippets
   url: docs
+  links:
+    - title: Postgres
+      url: "snippets#Docker"
+      children:
+        - title: PL/Java in a Postgres DB
+          url: "docs/postgres/enable-pljava-in-a-postgres-database"

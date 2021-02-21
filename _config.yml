@@ -77,6 +77,9 @@ collections:
   snippets:
     output: true
     permalink: /:collection/:path
+  resources:
+    output: true
+    permalink: /:collection/:path
 
 # Defaults
 defaults:
@@ -84,10 +87,15 @@ defaults:
       path: "_docs"
       type: "docs"
     values:
-      layout: page      
+      layout: page
   - scope:
       path: "_snippets"
       type: "snippets"
+    values:
+      layout: page
+  - scope:
+      path: "_resources"
+      type: "resources"
     values:
       layout: page
   - scope:

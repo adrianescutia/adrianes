@@ -1,7 +1,7 @@
 ---
 title: Installing Kubernetes and Docker in offline scenarios
 description: Steps to prepare an environment to install Kubernetes and Docker on Red Hat 7 where it is not possible to access the internet
-categories:
+tags:
   - Kubernetes
 ---
 

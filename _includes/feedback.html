@@ -13,7 +13,11 @@
     display: block;
   }
 </style>
-<h5 class="feedback--title">Feedback</h5>
+<h4 class="feedback--title">Feedback</h4>
+<p>
+For any feedback or request, don't hesitate, open an `issue` and let me know. 
+<a href="{{ site.repo }}/issues/new?labels={% if page.editable %}{{ page.editable }}{% else %}question{% endif %}&title=Question:&body=Question on: {{ site.repo }}/tree/master/{{ page.path }}" target="_blank"><i class="fab fa-github fa-fw"></i> Don't be shy.</a>
+</p>
 <p class="feedback--question">Was this page helpful?</p>
 <button class="feedback--answer feedback--answer-yes">Yes</button>
 <button class="feedback--answer feedback--answer-no">No</button>
@@ -23,6 +27,7 @@
 <p class="feedback--response feedback--response-no">
   Sorry to hear that. Please <a href="{{ site.repo  }}/issues/new">tell us how we can improve</a>.
 </p>
+
 <script>
   const yesButton = document.querySelector('.feedback--answer-yes');
   const noButton = document.querySelector('.feedback--answer-no');

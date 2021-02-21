@@ -1,7 +1,7 @@
 ---
 title: Small netcat server
 description: A Docker image to serve TPC requests
-categories:
+tags:
   - Docker
 ---
 

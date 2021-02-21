@@ -1,7 +1,7 @@
 ---
 title: Multiple Git host or repositories
 description: If you have a problem with multiple accounts for Git, here you find a solution to access with different credentials.
-categories:
+tags:
   - Git
 ---
 

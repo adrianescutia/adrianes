@@ -1,6 +1,6 @@
 ---
 title: Create a new Git Repo
-categories:
+tags:
   - Git
 ---
 

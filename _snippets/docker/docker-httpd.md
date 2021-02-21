@@ -1,7 +1,7 @@
 ---
 title: Small httpd server
 description: A Docker image to serve http requests
-categories:
+tags:
   - Docker
 ---
 

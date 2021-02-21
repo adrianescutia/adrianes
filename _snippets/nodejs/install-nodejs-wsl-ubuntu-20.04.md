@@ -1,6 +1,6 @@
 ---
 title: Node.js v12 or v14 Installation instructions in WSL Ubuntu 20
-categories:
+tags:
      - NodeJS 
      - WSL
 ---
