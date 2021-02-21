@@ -22,7 +22,7 @@ prebuild packages I have generated:
 
 ## Dockerized PL/Java
 
-Adapt this [stack](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/adrianescutia/adrianes/_resources/postgres/pljava/docker-compose.yaml) 
+Adapt this [stack](https://labs.play-with-docker.com/?stack={{site.url}}/resources/postgres/pljava/docker-compose.yaml) 
 as per your convenience, then, run `docker stack deploy -c docker-compose.yaml postgres` or 
 `docker-compose -f docker-compose.yaml up --detach`, wait for it to initialize completely, and visit 
 http://swarm-ip:9000, http://localhost:9000, or http://host-ip:9000 (as appropriate).
@@ -33,7 +33,7 @@ The PWD button below allows you to deploy the stack and test if this is what you
 services:
 
   db:
-    image: ades/postgres11-pljava:1.6.2
+    image: adrianescutia/postgres11-pljava:1.6.2
     restart: always
     environment:
       - POSTGRES_DB=ades
@@ -49,7 +49,9 @@ services:
       - 9000:8080
 ```
 
-[![Try in PWD](https://raw.githubusercontent.com/play-with-docker/stacks/master/assets/images/button.png)](https://labs.play-with-docker.com/?stack={{site.url}}/resources/postgres/pljava/docker-compose.yaml)
+[![Try in PWD](https://raw.githubusercontent.com/play-with-docker/stacks/master/assets/images/button.png)](https://play-with-docker.com/?stack={{site.url}}/resources/postgres/pljava/docker-compose.yaml)
+
+**Issues with PWD?** See troubleshooting below.
 
 You will have to set `pljava.libjvm_location` and create the java extension, to make 
 this configuration use the [SQL in our resources](/resources/postgres/pljava/setup.sql), either, in Adminer UI, or executing following commands:
@@ -73,10 +75,25 @@ cat ./setup.sql | docker exec -i pljava_db_1 psql -U ades -d ades
 
 I hope you find this document helpful. Thanks!
 
+## Troubleshooting
+
+If the PWD stack doesn't start.
+
+1. Start a new session.
+2. Click the link "Add New Instance"
+3. Drag and Drop the file from your desktop.
+   1. Other option is to get the file with `curl`: `curl https://adrianescutia.github.io/adrianes/resources/postgres/pljava/docker-compose.yaml -o docker-compose.yaml`
+
+The caveat with curl is that you need to type the full address!! It doesn't support copy/paste (at least not when I tested).
+
+![File upload](https://i2.wp.com/www.docker.com/blog/wp-content/uploads/pwd_upload-1.gif?resize=710%2C406&ssl=1)  
+Source: [The best way to learn Docker for Free: Play-With-Docker (PWD)](https://www.docker.com/blog/best-way-learn-docker-free-play-docker-pwd/)
+
 ## References
 
 * https://www.postgresql.org/docs/11/sql-createtrigger.html
 * [PL/Java](https://tada.github.io/pljava/) project docs.
+* [The best way to learn Docker for Free: Play-With-Docker (PWD)](https://www.docker.com/blog/best-way-learn-docker-free-play-docker-pwd/)
 
 If there is a specific version you require, you need to [Build PL/Java](https://tada.github.io/pljava/build/build.html) 
 and install your own version as per your requirements (Postgres and Java version).
