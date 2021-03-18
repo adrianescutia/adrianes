@@ -14,7 +14,7 @@ Kubernetes and Docker are going to be installed in a Red Hat 7 server without co
 Run the Centos container mounting a volume in your Docker host/PC, then, that path will be used to package all files that will be uploaded to your server with no Internet access.
 
 This process was ran and tested using [WSL](https://docs.microsoft.com/en-us/windows/wsl/about) in the PC with Internet access, the directory used to host files in example is: 
-<your_rpm_dir> --> /c/Temp/deleteme
+`your_rpm_dir` --> /c/Temp/deleteme
 
 ## Download Docker (online machine/Docker host)
 
