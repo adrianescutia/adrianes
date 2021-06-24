@@ -22,7 +22,7 @@ Then, let **ghcr.io** being the server.
 ```sh
 cd ~
 # Download the cert:
-openssl s_client -showcerts -servername ghcr.io  -connect server:443 > cacert.pem
+openssl s_client -showcerts -servername ghcr.io  -connect ghcr.io:443 > cacert.pem
 # type "quit", followed by the "ENTER" key / or Ctrl+C
 # see the data in the certificate:
 openssl x509 -inform PEM -in cacert.pem -text -out certdata-ghcr.io.txt
