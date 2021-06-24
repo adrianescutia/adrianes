@@ -10,7 +10,8 @@ tags:
 Here are the steps to solve this error when "curl fails to verify the legitimacy of the server and therefore 
 could not establish a secure connection to it"
 
-Let's say you try to download something using `curl` or install [hub]() using [brew], then, you get an error like:  
+Let's say you try to download something using `curl` or install [hub](https://hub.github.com) 
+using [brew](https://docs.brew.sh/Homebrew-on-Linux), then, you get an error like:  
 ```sh
 ==> Downloading https://ghcr.io/v2/linuxbrew/core/ncurses/manifests/6.2
 curl: (60) SSL certificate problem: unable to get local issuer certificate
