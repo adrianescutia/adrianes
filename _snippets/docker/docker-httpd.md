@@ -5,7 +5,7 @@ tags:
   - Docker
 ---
 
-# FROM scratch
+# Busybox, The Swiss Army Knife
 
 Create the small Docker image to serve http request. You can implement mockups with this.
 
