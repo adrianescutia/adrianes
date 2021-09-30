@@ -29,11 +29,11 @@ http://swarm-ip:9000, http://localhost:9000, or http://host-ip:9000 (as appropri
 
 The PWD button below allows you to deploy the stack and test if this is what you expect.
 
-```yaml
+```s
 services:
 
   db:
-    image: adrianescutia/postgres11-pljava-jdk:1.6.2
+    image: adrianescutia/postgres11-pljava:1.6.2
     restart: always
     environment:
       - POSTGRES_DB=ades
@@ -69,18 +69,9 @@ cat ./setup.sql | docker exec -i pljava_db_1 psql -U ades -d ades
 
 1. Copy your Java archives (JAR files) to the same directory on all Database hosts. i.e.: $HOME/pljava/.
 2. Install the JAR file:  
-  `SELECT sqlj.install_jar('file:///`_/var/lib/postgresql/share/postgresql/pljava/pljava-hello.jar_`', 'hello', true);`
+  `SELECT sqlj.install_jar(`_/var/lib/postgresql/share/postgresql/pljava/pljava-hello.jar_`, 'hello', true);`
 3. Set the _pljava_classpath_ server configuration parameter. For example:  
   `SELECT sqlj.set_classpath('javatest', 'hello');`
-4. Create Function
-```sql
-CREATE FUNCTION sayHi()
-  RETURNS void
-   AS 'com.test.Hello.sayHi'
-   LANGUAGE java;
-```
-5. Test function
-   `select sayHi();`
 
 I hope you find this document helpful. Thanks!
 
