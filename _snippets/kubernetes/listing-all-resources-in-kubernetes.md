@@ -5,7 +5,11 @@ tags:
   - Kubernetes
 ---
 
-Setting a default namespace (optional):  
+# Listing All Resources in Kubernetes
+
+Two quick and easy options of listing all the resources deployed in Kubernetes.
+
+Setting a **default namespace** (optional):  
 `kubectl config set-context --current --namespace=my-namespace`
 
 ## Option 1
@@ -19,7 +23,8 @@ kubectl get all
 
 ## Option 2:
 
-Or you can use this function:  
+Or you can use function below. Advantage is that this function will list default 
+resources and [Custom Resources](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) (CRDs) as well:
 
 ```sh
 function kubectlgetall {
@@ -35,12 +40,20 @@ function kubectlgetall {
   done
 }
 ```
-Usage: `kubectlgetall <namespace>`  
-    namespace is **optional**
+
+**Usage:** `kubectlgetall <namespace>`  
+
+> namespace is optional
 
 Example: get all resources from the `kafka` namespace:
 
 `kubectlgetall kafka`
+
+get all resources from default namespace:
+
+`kubectlgetall`
+
+---
 
 References:
 
